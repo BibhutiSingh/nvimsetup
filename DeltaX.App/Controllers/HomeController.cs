@@ -12,10 +12,10 @@ namespace DeltaX.App.Controllers
     {
         public IActionResult Index()
         {
-            DALTest tst=new DALTest();
+           Repository<Entities.Actor> testRepo=new Repository<Entities.Actor>();
 
 
-            return View(tst.TestConnection());
+            return View(testRepo.GetAll());
         }
 
         public IActionResult About()

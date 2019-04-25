@@ -1,9 +1,22 @@
-﻿@model bool
+﻿@model IEnumerable<DeltaX.App.Entities.Actor>
 @{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="container-fluid">
-    <h2>Home Page: @Model</h2>
+    <h2>Home Page: </h2>
     <img src="~/Assets/Test.png"/>
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+        </tr>
+        }
+    </table>
 </div>
