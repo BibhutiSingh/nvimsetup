@@ -22,7 +22,7 @@ return {
   end
 		dap.adapters.coreclr = {
 			type = "executable",
-			command = "C:\\Users\\nath7036\\AppData\\Local\\nvim-data\\mason\\packages\\netcoredbg\\netcoredbg\\netcoredbg.exe",
+			command = "netcoredbg.exe",
 			args = { "--interpreter=vscode" },
 		}
 		dap.configurations.cs = {
